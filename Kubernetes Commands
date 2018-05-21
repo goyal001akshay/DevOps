@@ -33,3 +33,10 @@
 18. curl 172.17.0.69
 19. s get svc
 20.  curl 172.17.0.69:31139
+
+/* To increase replicas of replica controller named rc to 10 */
+s scale --replicas=10 rc/my-nginx
+
+/* To update my all sourrounding from centos to ubuntu */
+/*  my-centos-rc is a previous image and myubuntu:t1 is new image*/
+s rolling-update --image=myubuntu:t1 my-centos-rc
