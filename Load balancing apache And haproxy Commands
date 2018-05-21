@@ -6,7 +6,7 @@ yum install httpd -y
 service httpd start
 echo "Akshay goyal is great" > /var/www/html/index.html
 cat /var/www/html/index.html
-Akshay goyal is great
+/*Akshay goyal is great*/
 hostname -I
 18.220.192.176
 
@@ -18,7 +18,7 @@ yum install httpd -y
 service httpd start
 echo "Akshay goyal is great as well as awesome" >/var/www/html/index.html
 cat /var/www/html/index.html
-Akshay goyal is great as well as awesome
+/*Akshay goyal is great as well as awesome*/
 hostname -I
 18.188.77.168
 
