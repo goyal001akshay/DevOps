@@ -1,0 +1,35 @@
+01. git init .
+02. git clone https://github.com/awesomemayank007/devops
+03. ls
+04. cd devops
+05. ls
+06. cd kubernetes_scripts/
+07. ls
+08. sudo apt install docker
+
+   /*to run or pull jenkins and all*/
+09. docker run -d -p 8080:8080 -p 50000:50000 docker.io/jenkins
+
+   /*to get namespace*/
+10. kubectl get ns
+11. alias s="kubectl -n default"
+
+   /*to create a pod*/
+12. s create -f pod
+
+   /*to see the pods*/
+13. s get pods
+
+   /*to describe pod and check its all config*/
+14. s describe pods nginx
+   
+   /* to create Replica controller*/
+15. s create -f RC
+ 
+  /* To expose the pod*/
+16. s expose --type=NodePort --port=80 rc/my-nginx
+
+17. hostname -I
+18. curl 172.17.0.69
+19. s get svc
+20.  curl 172.17.0.69:31139
