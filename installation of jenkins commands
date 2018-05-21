@@ -1,0 +1,27 @@
+
+1. sudo su -
+2. yum install docker -y
+3. service docker start
+4. docker run -d -p 8080:8080 -p 50000:50000 docker.io/jenkins
+
+jenkins 
+
+
+/* If i am using first time then  i have to do this, check the default password for me */
+{{{{{{{{{{
+docker ps
+
+/*
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+1400750caab5        jenkins             "/bin/tini -- /usr/l…"   20 minutes ago      Up 20 minutes       0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   gallant_babbage
+
+*/
+
+docker exec -it 1400750caab5 bash
+cat /var/jenkins_home/secrets/initialAdminPassword
+
+/*
+9dcaf62a3544401aa3f1e18faf9504a4
+*/
+}}}}}}}}}}
